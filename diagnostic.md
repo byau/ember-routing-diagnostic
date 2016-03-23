@@ -7,6 +7,7 @@ Record your responses inside the fenced code blocks below each question.
 
     ```md
     <!-- your response here -->
+    the router keeps tracks of the urls or the path of each templates.  Inside each route, you will want to include a model hook, which pass the information into the template.  it helps load the appropriate template and the appropriate model.
     ```
 
 1.  What is the command to generate a route named `boston` nested under
@@ -14,6 +15,7 @@ Record your responses inside the fenced code blocks below each question.
 
     ```md
     <!-- your response here -->
+    ember g route boston
     ```
 
 1.  Suppose you have a nested route at the URL `/campus/boston`. How would you
@@ -21,6 +23,7 @@ Record your responses inside the fenced code blocks below each question.
 
     ```md
     <!-- your response here -->
+    {{#link-to 'campus.boston'}} {{/link-to}}
     ```
 
 1.  Explain **at least** two differences between the following two route
@@ -36,6 +39,11 @@ Record your responses inside the fenced code blocks below each question.
 
     ```md
     <!-- your response here -->
+    first one should how the product and products are related, and 2nd just simply denote the path or url with the product, while the url is after products, it doesn't have to had any relationship with products.
+
+    in the 1st case, the product template can be loaded onto the {{outlet}} in products template, but not in the 2nd case.
+
+    If you loaded case 1, the products template will be loaded to the application, then product template can be loaded to the outlet section of products template.  case 2 will just load product template to the application by-passing products template.
     ```
 
 1.  Suppose we have the following route definition:
@@ -49,10 +57,12 @@ Record your responses inside the fenced code blocks below each question.
 
     ```md
     <!-- your response here -->
+    params.movie_id
     ```
 
 1.  Inside a template, how do we reference data provided by a Route?
 
     ```md
     <!-- your response here -->
+    model
     ```
